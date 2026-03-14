@@ -346,7 +346,8 @@ header p {
             "header"
             "chat"
             "input";
-        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
     }
 
     .sidebar {
@@ -366,34 +367,51 @@ header p {
     }
 
     .chat-box {
-        padding: 20px;
+        padding: 16px;
+        overflow-y: auto;
+        flex: 1;
     }
 
     .message {
-        max-width: 85%;
+        max-width: 88%;
+        font-size: 0.88rem;
     }
 
     .input-area {
-        padding: 12px 20px 20px;
+        padding: 12px 16px 24px;
+        background: rgba(13,13,20,0.98);
+        position: sticky;
+        bottom: 0;
+        z-index: 50;
     }
 
-    /* Floating SOS button on mobile */
+    .input-area input {
+        padding: 12px 16px;
+        font-size: 0.88rem;
+    }
+
+    .input-area button {
+        padding: 12px 20px;
+        font-size: 0.88rem;
+    }
+
     .sos-mobile {
         display: flex;
         position: fixed;
         bottom: 90px;
-        right: 20px;
-        width: 56px;
-        height: 56px;
+        right: 16px;
+        width: 52px;
+        height: 52px;
         background: linear-gradient(135deg, var(--red), var(--red-dark));
         border-radius: 50%;
         align-items: center;
         justify-content: center;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         box-shadow: 0 4px 20px var(--red-glow);
         cursor: pointer;
         animation: pulse 2.5s infinite;
         z-index: 100;
+        border: none;
     }
 }
 
