@@ -337,3 +337,66 @@ header p {
     background: var(--red-glow);
     transform: scale(1.03);
 }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "chat"
+            "input";
+        height: 100vh;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    header {
+        padding: 16px 20px;
+    }
+
+    header p {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .chat-box {
+        padding: 20px;
+    }
+
+    .message {
+        max-width: 85%;
+    }
+
+    .input-area {
+        padding: 12px 20px 20px;
+    }
+
+    /* Floating SOS button on mobile */
+    .sos-mobile {
+        display: flex;
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(135deg, var(--red), var(--red-dark));
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        box-shadow: 0 4px 20px var(--red-glow);
+        cursor: pointer;
+        animation: pulse 2.5s infinite;
+        z-index: 100;
+    }
+}
+
+.sos-mobile {
+    display: none;
+}
