@@ -21,7 +21,7 @@ cd she-shield
 pip3 install flask groq python-dotenv
 ```
 
-Create a `.env` file and add:
+Create a `.env` file and add :
 ```
 GROQ_API_KEY=your_key_here
 ```
